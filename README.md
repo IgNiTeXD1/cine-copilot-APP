@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# 🎬 CineCopilot – AI-Powered Video Segmentation & Cinematographic Analysis  
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+CineCopilot is an **AI-driven video analysis toolkit** that automates scene segmentation, shot classification, camera angle detection, lighting analysis, and character binning.  
+It is designed for **filmmakers, editors, students, and researchers** who want structured insights into cinematographic storytelling without tedious manual work.  
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## ✨ Features
+- 🎥 **Scene Segmentation** – Detects hard cuts, fades, dissolves using **SSIM**, histogram analysis, and optical flow.  
+- 📸 **Shot & Camera Angle Classification** – Classifies shot sizes (close-up, medium, wide) and camera angles (eye-level, high, low, Dutch tilt) using **ResNet-18 & CNNs**.  
+- 🧑‍🤝‍🧑 **Character Binning** – Groups video frames by characters using **MobileNetV2 embeddings + cosine similarity**.  
+- 💡 **Lighting Analysis** – Evaluates brightness, contrast, color temperature, glare, and shadows with structured reports.  
+- 🌐 **Web Dashboard** – React + FastAPI interface for uploading videos, running analysis, and visualizing results.  
+- 📊 **Export & Reports** – Scene-wise CSVs, heatmaps, radar charts, and extracted video clips for insights.  
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🛠️ Tech Stack
+- **Frontend**: React  
+- **Backend**: FastAPI, Redis  
+- **Libraries**: OpenCV, PyTorch, TensorFlow, Pandas, FAISS  
+- **Models**: MobileNetV2, ResNet-18, CNNs, Optical Flow  
+- **Deployment**: Modular APIs, Web-based interface  
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 📦 Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. Clone the Repository
 
-### `npm run build`
+git clone https://github.com/yourusername/cinecopilot.git
+cd cinecopilot
+2. Create Virtual Environment & Install Dependencies
+bash
+Copy code
+python -m venv venv
+source venv/bin/activate   # (Linux/Mac)
+venv\Scripts\activate      # (Windows)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+pip install -r requirements.txt
+3. Start Backend (FastAPI)
+bash
+Copy code
+uvicorn app.main:app --reload
+4. Start Frontend (React)
+bash
+Copy code
+cd frontend
+npm install
+npm start
+🚀 Usage
+Open the web dashboard in your browser.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upload a video file.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Choose the analysis module:
 
-### `npm run eject`
+Scene Segmentation
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Shot & Camera Angle Classification
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Lighting Analysis
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Character Binning
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+View results in interactive charts or download CSV reports.
 
-## Learn More
+📊 Example Outputs
+Shot Transition CSV → Frame-wise boundaries of cuts & transitions.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Camera Angle Heatmap → Distribution of shots (close-up, wide, OTS, etc.).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Lighting Report → Brightness, contrast, shadow intensity, glare presence.
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Character Video Clips → Extracted segments of a chosen character.
