@@ -18,58 +18,23 @@ It is designed for **filmmakers, editors, students, and researchers** who want s
 ## 🛠️ Tech Stack
 - **Frontend**: React  
 - **Backend**: FastAPI, Redis  
-- **Libraries**: OpenCV, PyTorch, TensorFlow, Pandas, FAISS  
+- **Libraries**: OpenCV, PyTorch, TensorFlow, Pandas, FAISS ,SSIM 
 - **Models**: MobileNetV2, ResNet-18, CNNs, Optical Flow  
-- **Deployment**: Modular APIs, Web-based interface  
 
----
+SSIM SEGMETATION:
+<img width="873" height="361" alt="image" src="https://github.com/user-attachments/assets/ff2f032b-6ffe-455a-954b-a04c7678e1a0" />
 
-## 📦 Installation
+LIGHT COMP ANALYTICS:
+<img width="940" height="449" alt="image" src="https://github.com/user-attachments/assets/f52357b8-42ca-4ebe-b842-e144d8b49aae" />
+<img width="940" height="450" alt="image" src="https://github.com/user-attachments/assets/487909b2-dbd6-4ff4-b0f1-9662d1087b77" />
 
-### 1. Clone the Repository
+CAMERA ANGLE COMPOSITION ANALYTICS:
+<img width="940" height="433" alt="image" 
+  src="https://github.com/user-attachments/assets/37afa7e0-30f8-425e-b5db-aff7c5c88292" />
+  <img width="940" height="433" alt="image" src="https://github.com/user-attachments/assets/91095cef-094c-45b3-987d-0450415907df" />
 
-git clone https://github.com/yourusername/cinecopilot.git
-cd cinecopilot
-2. Create Virtual Environment & Install Dependencies
-bash
-Copy code
-python -m venv venv
-source venv/bin/activate   # (Linux/Mac)
-venv\Scripts\activate      # (Windows)
 
-pip install -r requirements.txt
-3. Start Backend (FastAPI)
-bash
-Copy code
-uvicorn app.main:app --reload
-4. Start Frontend (React)
-bash
-Copy code
-cd frontend
-npm install
-npm start
-🚀 Usage
-Open the web dashboard in your browser.
 
-Upload a video file.
 
-Choose the analysis module:
 
-Scene Segmentation
 
-Shot & Camera Angle Classification
-
-Lighting Analysis
-
-Character Binning
-
-View results in interactive charts or download CSV reports.
-
-📊 Example Outputs
-Shot Transition CSV → Frame-wise boundaries of cuts & transitions.
-
-Camera Angle Heatmap → Distribution of shots (close-up, wide, OTS, etc.).
-
-Lighting Report → Brightness, contrast, shadow intensity, glare presence.
-
-Character Video Clips → Extracted segments of a chosen character.
